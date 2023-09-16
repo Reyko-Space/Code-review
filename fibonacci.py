@@ -11,6 +11,7 @@ def fibonacci(n):
             sequencia.append(k)
             i = j
             j = k
+
         elif n < sequencia[-1]:
             return print("Esse numero nao faz parte da sequencia de fibonacci")
         else:
