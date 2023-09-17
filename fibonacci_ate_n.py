@@ -17,5 +17,5 @@ def fibonacci(n):
         else:
             return print(sequencia)
 
-n = int(input("Numero: "))
-fibonacci(n)
+# n = int(input("Numero: "))
+# fibonacci(n)
