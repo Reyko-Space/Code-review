@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from fibonacci_ate_n import fibonacci
 
 app = FastAPI()
 
