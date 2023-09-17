@@ -16,20 +16,22 @@ def fibonacci_ate_n(n: int):
     j = 1
     k = 0
 
-    sequencia = [i, j]
+    sequence = [i, j]
 
     while True:
-        if n > sequencia[-1]:
+        if n > sequence[-1]:
             k = i + j
-            sequencia.append(k)
+            sequence.append(k)
             i = j
             j = k
 
-        elif n < sequencia[-1]:
-            return "Esse numero não faz parte da sequência de fibonacci!"
+        elif n < sequence[-1]:
+            return {
+                "Erro": "Esse numero não faz parte da sequência de fibonacci!"
+            }
         else:
             return {
-                "Sequência": str(sequencia)
+                "Sequência": str(sequence)
             }
         
 @app.post("/fibonacci/n_vezes/{n}")
@@ -38,15 +40,14 @@ def fibonacci_n_vezes(n: int):
     j = 1
     k = 0
 
-    sequencia = [i, j]
+    sequence = [i, j]
         
-    while len(sequencia) < n:
+    while len(sequence) < n:
         k = i + j
-        sequencia.append(k)
+        sequence.append(k)
         i = j
         j = k
 
     return {
-        "Sequência": str(sequencia)
+        "Sequência": str(sequence)
     }
-        
