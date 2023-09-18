@@ -3,16 +3,16 @@ def fibonacci(n):
     j = 1
     k = 0
 
-    sequencia = [i, j]
+    sequence = [i, j]
         
-    while len(sequencia) < n:
+    while len(sequence) < n:
         k = i + j
-        sequencia.append(k)
+        sequence.append(k)
         i = j
         j = k
 
     return {
-        "Sequência": str(sequencia)
+        "Sequência": str(sequence)
     }
 
 # n = int(input("Numero: "))

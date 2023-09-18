@@ -3,19 +3,23 @@ def fibonacci(n):
     j = 1
     k = 0
 
-    sequencia = [i, j]
+    sequence = [i, j]
 
     while True:
-        if n > sequencia[-1]:
+        if n > sequence[-1]:
             k = i + j
-            sequencia.append(k)
+            sequence.append(k)
             i = j
             j = k
 
-        elif n < sequencia[-1]:
-            return print("Esse numero nao faz parte da sequencia de fibonacci")
+        elif n < sequence[-1]:
+            return {
+                "Erro": "Esse numero não faz parte da sequência de fibonacci!"
+            }
         else:
-            return print(sequencia)
+            return {
+                "Sequência": str(sequence)
+            }
 
 # n = int(input("Numero: "))
 # fibonacci(n)

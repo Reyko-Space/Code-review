@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from fibonacci_ate_n import fibonacci as fibonacci_ate_n
+from fibonacci_n_vezes import fibonacci as fibonacci_n_vezes
 
 app = FastAPI()
 
@@ -11,43 +13,9 @@ def health():
     return ("Estou saudável!")
 
 @app.post("/fibonacci/ate_n/{n}")
-def fibonacci_ate_n(n: int):
-    i = 0
-    j = 1
-    k = 0
-
-    sequence = [i, j]
-
-    while True:
-        if n > sequence[-1]:
-            k = i + j
-            sequence.append(k)
-            i = j
-            j = k
-
-        elif n < sequence[-1]:
-            return {
-                "Erro": "Esse numero não faz parte da sequência de fibonacci!"
-            }
-        else:
-            return {
-                "Sequência": str(sequence)
-            }
+def fib_ate_n(n: int):
+    return fibonacci_ate_n(n)
         
 @app.post("/fibonacci/n_vezes/{n}")
-def fibonacci_n_vezes(n: int):
-    i = 0
-    j = 1
-    k = 0
-
-    sequence = [i, j]
-        
-    while len(sequence) < n:
-        k = i + j
-        sequence.append(k)
-        i = j
-        j = k
-
-    return {
-        "Sequência": str(sequence)
-    }
+def fib_n_vezes(n: int):
+    return fibonacci_n_vezes(n)
