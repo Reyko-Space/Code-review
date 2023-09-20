@@ -22,9 +22,7 @@ A fim de utilizar o recurso em container, foi feito a seguinteimagem para uso em
 ## ⚙️Como rodar
 Para rodar a aplicação, seguir os seguintes passos:
 - Se já não tiver, baixar o Docker Desktop para rodar o container (https://www.docker.com/products/docker-desktop/);
-- Baixar/Dar pull no projeto;
-- Abrir a pasta baixada e selecionar o arquivo "code.dockerfile";
-- Abrir um terminal;
-- Utilizar o comando "docker build -t [nome_da_sua_imagem] . -f code.dockerfile" para criar a imagem;
+- Clonar o repositório;
+- Utilizar o comando "docker build -t [nome_da_sua_imagem] . -f code.dockerfile" em um terminal para criar a imagem;
 - Depois utilizar "docker run -d --name [nome_do_seu_container] -p 8000:8000 [nome_da_sua_imagem]";
 - Pronto! Agora você pode testar as requisições GET pelo browser "localhost:8000" e "localhost:8000/health", para testar a requisição POST use um REST API Client, como Thunder Client (https://www.thunderclient.com) ou Postman (https://www.postman.com).
