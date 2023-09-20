@@ -1,15 +1,25 @@
 # Code-review
+## 🤔Sobre
 Essa API demonstra o funcionamento dos métodos GET e POST a partir de uma requisição de estado de saúde e um programa em pyhton que calcula e mostra a sequência de fibonacci de duas formas:
 - Um número n é dado pelo cliente, se for um valor de fibonacci, é devolvido toda a sequência até aquele número, se não for, ele devolve um erro;
-- Um número n é dado pelo cliente, e são gerados n valores da sequência.
+- Um número n é dado pelo cliente, e são gerados os n valores da sequência.
 
-## Temas abordados
-- Python
-- API REST
-- Requisições GET e POST (testes com Thunder Client)
-- Docker
+## 📑Temas abordados
+- Python;
+- API REST;
+- Requisições GET e POST;
+- Docker.
 
-## Como rodar
+##  🔎Sobre a imagem
+A fim de utilizar o recurso em container, foi feito a seguinteimagem para uso em Docker:
+- FROM: indica uma imagem, que será utilizada como base para a aplicação;
+- WORKDIR: indica um diretório para ser usado dentro do container;
+- COPY: copia determinados arquivos para dentro do container, na pasta criada no workdir (project);
+- RUN: instalar as bibliotecas necessárias para a aplicação;
+- EXPOSE: abre a porta 8000 do container;
+- CMD: terminando as instalações e preparação, rodar a aplicação usando o uvicorn localmente na porta 8000;
+
+## ⚙️Como rodar
 Para rodar a aplicação, seguir os seguintes passos:
 - Se já não tiver, baixar o Docker Desktop para rodar o container (https://www.docker.com/products/docker-desktop/);
 - Baixar/Dar pull no projeto;
