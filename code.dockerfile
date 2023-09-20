@@ -1,8 +1,12 @@
 FROM python:3.11-bullseye
 
-WORKDIR /project
+WORKDIR /usr/src/myApp
 
-COPY requirements.txt ./app ./project/
+COPY requirements.txt \
+    /app/fibonacci_n_vezes.py \
+    /app/fibonacci_ate_n.py \
+    /app/main.py \
+    /usr/src/myApp/
 
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
