@@ -11,10 +11,10 @@ Essa API demonstra o funcionamento dos métodos GET e POST a partir de uma requi
 - Docker.
 
 ##  🔎Sobre a imagem
-A fim de utilizar o recurso em container, foi feito a seguinteimagem para uso em Docker:
+A fim de utilizar o recurso em container, foi feito a seguinte imagem:
 - FROM: indica uma imagem, que será utilizada como base para a aplicação;
-- WORKDIR: indica um diretório para ser usado dentro do container;
-- COPY: copia determinados arquivos para dentro do container, na pasta criada no workdir (project);
+- WORKDIR: indica um diretório para ser usado dentro do container (usr/src/myApp);
+- COPY: copia determinados arquivos para dentro do container, na pasta criada no workdir;
 - RUN: instalar as bibliotecas necessárias para a aplicação;
 - EXPOSE: abre a porta 8000 do container;
 - CMD: terminando as instalações e preparação, rodar a aplicação usando o uvicorn localmente na porta 8000;
