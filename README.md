@@ -1,4 +1,4 @@
-# Code-exercise
+# REST Sample
 ## 🤔Sobre
 Essa API demonstra o funcionamento dos métodos GET e POST a partir de uma requisição de estado de saúde e um programa em pyhton que calcula e mostra a sequência de fibonacci de duas formas:
 - Um número n é dado pelo cliente, se for um valor de fibonacci, é devolvido toda a sequência até aquele número, se não for, ele devolve um erro;
